@@ -14,7 +14,7 @@ class PresetService {
     private dataPath: string;
 
     constructor() {
-        const dbPath = process.env.DB_PATH || '';
+        const dbPath = 'data/database.json';
         this.dataPath = path.resolve(__dirname, '..', dbPath);
         this.loadPresets();
     }

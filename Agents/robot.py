@@ -9,6 +9,7 @@ from enum import Enum
 from typing import Set, Tuple, List, Optional
 from dataclasses import dataclass
 from grid import Grid, CellType, Position
+import traceback
 
 
 class Direction(Enum):
@@ -69,6 +70,9 @@ class Robot:
         self._time_elapsed = 0
         self._people_saved = 0
         self._total_people = len(grid.person_positions)
+    
+    def print_grid(self):
+        print(self._grid)
 
     @property
     def position(self) -> Position:
@@ -258,5 +262,5 @@ def run_simulation(grid: Grid, solution_func) -> SimulationResult:
             time_elapsed=robot.time_elapsed,
             people_saved=robot.people_saved,
             total_people=robot._total_people,
-            message=f"Solution raised an exception: {str(e)}",
+            message=f"Solution raised an exception: {str(e)}\n{traceback.format_exc()}",
         )

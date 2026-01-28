@@ -131,7 +131,7 @@ Votre solution sera évaluée sur :
 ## Conseils
 
 - Utilisez `sense_fires_around()` fréquemment - c'est gratuit !
-- N'utilisez `scan_fires()` que si absolument nécessaire (coûte 10 secondes)
+- N'utilisez `()` que si absolument nécessaire (coûte 10 secondes)
 - Essayez de déduire où se trouvent les feux
 - La position de la personne est connue via `get_person_position()`, planifiez votre route en conséquence
 - Planifiez des routes efficaces pour minimiser les retours en arrière
